@@ -64,6 +64,16 @@ ul {
   border-bottom: 2px solid #ffffff; /* Hace que se muestre un margen abajo de cada LI */
 }
 
+.menu-btn {
+  position: absolute;
+  cursor: pointer; /* Hace que se muestre el puntero del raton */
+  top: 15px;
+  right: 30px;
+  z-index: 2;
+  font-size: 1.3rem; /* Cambia el tamaño del ícono */
+  display: none;
+}
+
 /* SHOWCASE */
 hr {
   margin: 10px 0; /* Agrega un margen con 10 px arriba y abajo, y de 0 a los lados */
@@ -75,7 +85,7 @@ hr {
   background: url("https://picsum.photos/id/171/2048/1536") no-repeat center
     center/cover; /* Agrega una imagen de fondo*/
   /*background: url("./img/showcase2.jpg") no-repeat center center/cover;*/
-  padding-bottom: 50px;
+  padding: 50px 20px;
   margin-bottom: 20px;
   display: flex; /* Hace que los elementos esten al lado y no uno arriba del otro */
   flex-direction: column; /* Hace que los elementos esten en una columna */
@@ -225,4 +235,57 @@ hr {
   padding: 20px 0;
   text-align: center;
   padding-bottom: 20px;
+}
+
+/* Media Querys*/
+@media (max-width: 375px) {
+  .menu-btn {
+    display: block;
+  }
+  .nav-main ul.nav-menu {
+    display: block; /* Alinea los elementos en una sola columna*/
+    position: absolute;
+    top: 0; /* Hace que los elementos se muestren desde el inicio de la página (vertical). */
+    left: 0; /* Hace que los elementos se muestren desde el inicio de la página (horizontal). */
+    background: #2f3640;
+    height: 100%; /* Hace que los elementos del menú se muestren en toda la pantalla verticalmente. */
+    padding: 30px;
+    opacity: 0.9;
+    transform: translate(
+      -200px
+    ); /* Mueve el elemento hacia la izquierda de la pantalla para 'desapareserlo */
+    transition: transform 0.5s ease-in-out;
+  }
+
+  /* Mueve (muestra) el menu de los links de la barra de navegación, siempre y cuando tenga la clase 'show' la cual se editara con Javascript. */
+  .nav-main ul.nav-menu.show {
+    transform: translateX(-15px);
+  }
+
+  .nav-main ul.nav-menu li {
+    padding: 20px;
+    font-size: 14px;
+  }
+
+  .nav-main ul.nav-menu-right {
+    margin-right: 40px; /* Mueve el elemento de la lupa 40px de la derecha */
+  }
+
+  .news-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards-banner-one .content,
+  .cards-banner-two .content {
+    width: 90%;
+  }
+
+  .footer-links {
+    font-size: 13px;
+    padding: 10px 0;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
