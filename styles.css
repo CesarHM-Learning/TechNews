@@ -39,7 +39,7 @@ ul {
 }
 
 .nav-brand {
-  width: 50px;
+  width: 30px;
 }
 
 /* NAV LEFT */
@@ -62,4 +62,167 @@ ul {
 
 .nav-main ul li a:hover {
   border-bottom: 2px solid #ffffff; /* Hace que se muestre un margen abajo de cada LI */
+}
+
+/* SHOWCASE */
+hr {
+  margin: 10px 0; /* Agrega un margen con 10 px arriba y abajo, y de 0 a los lados */
+}
+
+.showcase {
+  width: 100%; /* Hace que la imagen abarque el 100% del elemento*/
+  height: 550px;
+  background: url("https://picsum.photos/id/171/2048/1536") no-repeat center
+    center/cover; /* Agrega una imagen de fondo*/
+  /*background: url("./img/showcase2.jpg") no-repeat center center/cover;*/
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+  display: flex; /* Hace que los elementos esten al lado y no uno arriba del otro */
+  flex-direction: column; /* Hace que los elementos esten en una columna */
+  align-items: center; /* Pone los textos centrados. */
+  justify-content: flex-end; /* Pone los elementos en la parte de abajo del elemento*/
+}
+
+.btn {
+  cursor: pointer; /* Modifica el raton, haciendolo como si fuera un enlace */
+  display: inline-block;
+  font-weight: bold; /* Pone en negrita el texto del elemento */
+  padding: 10px 20px;
+  background: #000000;
+  color: #ffffff;
+  font-size: 15px;
+  border: 1px solid #fff;
+  margin: 10px 0;
+}
+
+.btn:hover {
+  opacity: 0.5; /* Hace que el elemento tenga una opacidad al momento de pasar el mouse encima */
+}
+
+.showcase h2,
+.showcase p {
+  margin-bottom: 10px;
+}
+
+/* NEWS CARDS */
+
+.news-cards {
+  display: grid; /* Aplica la grilla del CSS */
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* Hace que sean 4 columnas dentro del Grid */
+  gap: 25px; /*  */
+  margin: 10px 0; /* Aplica margenes arriba y abajo */
+}
+
+.news-cards img {
+  width: 100%; /* Aplica un ancho del 100% */
+  height: 180px; /* Aplica un alto de 180px al elemento */
+}
+
+.news-cards h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.news-cards a {
+  padding: 10px 0;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.news-cards a:hover {
+  text-decoration: underline;
+}
+
+/* CARDS BANNER ONE */
+.cards-banner-one,
+.cards-banner-two {
+  width: 100%;
+  height: 350px;
+  margin-bottom: 40px;
+}
+
+.cards-banner-one .content,
+.cards-banner-two .content {
+  width: 40%;
+  padding: 90px 0 0 30px;
+  color: #fff;
+}
+
+.cards-banner-one p,
+.cards-banner-one h2,
+.cards-banner-two p,
+.cards-banner-two h2 {
+  margin: 10px 0 20px 0;
+}
+
+.cards-banner-one {
+  background: url("https://picsum.photos/1200?blur=2") no-repeat center
+    center/cover;
+}
+
+.cards-banner-two {
+  background: url("https://picsum.photos/1200?blur=2") no-repeat center
+    center/cover;
+}
+
+/* SOCIAL */
+
+.social {
+  margin: 50px;
+}
+
+.social p {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links a {
+  margin: 0 30px;
+  font-size: 2rem;
+}
+
+/* FOOTER LINKS */
+.footer-links {
+  background: #2f3640;
+  color: #616161;
+  font-size: 12px;
+  padding: 35px 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.footer-container ul {
+  margin: 0 auto;
+}
+
+.footer-container ul li {
+  line-height: 2;
+}
+
+/* FOOTER */
+.footer {
+  background: #2f3640;
+  color: #616161;
+  font-size: 12px;
+  padding: 20px 0;
+  text-align: center;
+  padding-bottom: 20px;
 }
